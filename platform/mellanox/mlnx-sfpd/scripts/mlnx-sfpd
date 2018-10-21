@@ -106,9 +106,9 @@ def sx_recv(fd_p, handle):
         for i in range(0, port_cnt):
             port_attributes = sx_port_attributes_t_arr_getitem(port_attributes_list,i)
             if port_attributes.log_port == logical_port:
-                lable_port = port_attributes.port_mapping.module_port
+                label_port = port_attributes.port_mapping.module_port
                 break
-        label_port_list.append(lable_port)
+        label_port_list.append(label_port)
 
     return status, label_port_list, module_state, 
 
